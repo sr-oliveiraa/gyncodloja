@@ -9,132 +9,171 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <style>
-   body {
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9f9;
-  color: #333;
-  transition: all 0.3s ease;
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    header {
+      text-align: center;
+      background: linear-gradient(45deg, #007bff, #00bfff);
+      color: #fff;
+      padding-bottom: 20px;
+    }
+
+    .navbar {
+  background-color: #007bff;
+  padding: 10px 20px; /* Espaçamento interno */
+  display: flex;
+  justify-content: space-between; /* Distribui os elementos igualmente na linha */
+  align-items: center; /* Centraliza verticalmente */
+  margin-top: 0px; /* Espaçamento superior */
+  margin-bottom: 20px; /* Espaçamento inferior */
+  width: 90%; /* Largura da barra */
+  margin-left: auto; /* Alinha à direita */
+  margin-right: auto; /* Alinha à esquerda */
+  border-radius: 20px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-header {
-  text-align: center;
-  background: linear-gradient(45deg, #007bff, #00bfff);
-  padding: 50px 0;
-  color: #fff;
-}
 
-header h1 {
-  margin-top: 0;
-  font-size: 36px;
-}
 
-.hero img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #ff7f50;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
 
-.button:hover {
-  background-color: #ff6347;
-}
+    .navbar a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      margin: 0 5px;
+    }
 
-.container {
-  max-width: 90%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
+    .navbar a:hover {
+      background-color: #0056b3;
+    }
 
-.swiper-container {
-  padding: 20px 0;
-  position: relative; /* Adicione esta linha */
-}
+    header h1 {
+      margin-top: 0;
+      font-size: 36px;
+    }
 
-.swiper-slide {
-  text-align: center;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 40px 0;
-}
+    .hero img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+    }
 
-.feature-item img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff7f50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
 
-.feature-text {
-  padding: 0 20px;
-}
+    .button:hover {
+      background-color: #ff6347;
+    }
 
-footer {
-  background: linear-gradient(45deg, #007bff, #00bfff);
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
+    .container {
+      max-width: 90%;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
 
-footer .social-icons {
-  list-style-type: none;
-  padding: 0;
-}
+    .swiper-container {
+      padding: 20px 0;
+      position: relative; /* Adicione esta linha */
+    }
 
-footer .social-icons li {
-  display: inline;
-  margin: 0 10px;
-}
+    .swiper-slide {
+      text-align: center;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      padding: 40px 0;
+    }
 
-footer .social-icons img {
-  max-width: 70px;
-  height: auto;
-}
+    .feature-item img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
 
-/* Media queries para ajustar o layout em diferentes tamanhos de tela */
-@media only screen and (max-width: 768px) {
-  .container {
-    padding: 0 10px; /* Reduzindo o padding para telas menores */
-  }
+    .feature-text {
+      padding: 0 20px;
+    }
 
-  .swiper-slide {
-    padding: 20px 0; /* Reduzindo o padding dos slides para telas menores */
-  }
+    footer {
+      background: linear-gradient(45deg, #007bff, #00bfff);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
 
-  .feature-text {
-    padding: 0; /* Removendo o padding dos textos dos itens do carrossel para telas menores */
-  }
-}
+    footer .social-icons {
+      list-style-type: none;
+      padding: 0;
+    }
 
-@media only screen and (max-width: 576px) {
-  .swiper-slide {
-    padding: 10px 0; /* Reduzindo ainda mais o padding dos slides para telas pequenas */
-  }
-}
+    footer .social-icons li {
+      display: inline;
+      margin: 0 10px;
+    }
 
+    footer .social-icons img {
+      max-width: 70px;
+      height: auto;
+    }
+
+    /* Media queries para ajustar o layout em diferentes tamanhos de tela */
+    @media only screen and (max-width: 768px) {
+      .container {
+        padding: 0 10px; /* Reduzindo o padding para telas menores */
+      }
+
+      .swiper-slide {
+        padding: 20px 0; /* Reduzindo o padding dos slides para telas menores */
+      }
+
+      .feature-text {
+        padding: 0; /* Removendo o padding dos textos dos itens do carrossel para telas menores */
+      }
+    }
+
+    @media only screen and (max-width: 576px) {
+      .swiper-slide {
+        padding: 10px 0; /* Reduzindo ainda mais o padding dos slides para telas pequenas */
+      }
+    }
   </style>
 </head>
 
 <body>
   <header class="hero">
+    <div class="navbar">
+      <div>
+        <a href="#product-details">Características</a>
+        <!-- Adicione outros links de navegação aqui -->
+      </div>
+      <div>
+        <span>Telefone: (XX) XXXX-XXXX</span>
+        <a href="pagamento.html" class="button">Comprar Agora</a>
+      </div>
+    </div>
     <img src="/pro4.principal.jpg" alt="Imagem de Fones Airs Pro4 TWS">
     <h1>Airs Pro4 TWS</h1>
     <h2>Sua Música, Sem Limites</h2>
     <p>Desfrute de um som envolvente e graves poderosos com os fones Airs Pro4 TWS.</p>
-    <a href="pagamento.html" class="button">Comprar Agora</a>
   </header>
 
   <main>
@@ -211,7 +250,7 @@ footer .social-icons img {
       <p>&copy; GynCod 2024</p>
       <ul class="social-icons">
         <li><a href="https://www.instagram.com/gyncod"><img src="/insta.png" alt="Ícone Instagram"></a></li>
-        <!-- Adicione links para outras redes sociais -->
+        <!-- Adicione links para outras redes sociais aqui -->
       </ul>
     </div>
   </footer>
