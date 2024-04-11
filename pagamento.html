@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pagamento</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Pagamento</h1>
+  </header>
+
+  <main>
+    <form id="checkout-form">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" required>
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required>
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <button type="button" onclick="finalizarCompra()">Finalizar Compra</button>
+    </form>
+    <div style="text-align: center;">
+      <a href="https://pag.ae/7-qCSp1Kt/button" target="_blank" title="Pagar com PagBank">
+        <img src="//assets.pagseguro.com.br/ps-integration-assets/botoes/pagamentos/205x30-pagar.gif" alt="Pague com PagBank - é rápido, grátis e seguro!" />
+      </a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2024</p>
+  </footer>
+
+  <!-- Firebase Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-database.js"></script>
+  
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyDUSG7JkcXARgjeNqEeW1Z-HafTx7HZYvs",
+      authDomain: "gyncodloja.firebaseapp.com",
+      projectId: "gyncodloja",
+      storageBucket: "gyncodloja.appspot.com",
+      messagingSenderId: "36658217667",
+      appId: "1:36658217667:web:c158c904e0ad4adf84d876",
+      measurementId: "G-Y1HS7TXY02"
+    };
+  
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    const db = firebase.database(); // Use Realtime Database
+  
+    // Função para finalizar a compra
+    function finalizarCompra() {
+      // Coletar informações do formulário de entrega
+      var nome = document.getElementById('nome').value;
+      var endereco = document.getElementById('endereco').value;
+      var cidade = document.getElementById('cidade').value;
+      var cep = document.getElementById('cep').value;
+      var email = document.getElementById('email').value;
+    
+      // Validar se os campos estão preenchidos
+      if (nome && endereco && cidade && cep && email) {
+        // Gerar um código de verificação único
+        var codigoVerificacao = Math.random().toString(36).substr(2, 9);
+    
+        // Enviar os dados para o Firebase
+        db.ref("pedidos").push({ // Use "ref" para acessar a coleção "pedidos"
+          nome: nome,
+          endereco: endereco,
+          cidade: cidade,
+          cep: cep,
+          email: email,
+          codigoVerificacao: codigoVerificacao
+        })
+          .then(function (docRef) {
+            // Exibir o código de verificação ao usuário
+            alert('Seu pedido foi registrado com sucesso!\nCódigo de Verificação: ' + codigoVerificacao);
+          })
+          .catch(function (error) {
+            // Exibir uma mensagem de erro se houver problemas ao enviar os dados para o Firebase
+            console.error("Erro ao adicionar pedido: ", error);
+            alert('Ocorreu um erro ao registrar seu pedido. Por favor, tente novamente mais tarde.');
+          });
+      } else {
+        // Se algum campo estiver vazio, exibir uma mensagem de erro
+        alert('Por favor, preencha todos os campos do formulário.');
+      }
+    }
+  </script>
+</body>
+
+</html>
