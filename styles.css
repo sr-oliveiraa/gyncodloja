@@ -1,0 +1,73 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    background: linear-gradient(45deg, #007bff, #00bfff);
+    padding: 20px 0;
+    color: #fff;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"],
+  button[type="button"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 15px 30px; /* Aumentar o tamanho do botão */
+      border: none;
+      border-radius: 8px; /* Adicionar borda arredondada */
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionar transição de cor e transformação */
+      font-size: 16px; /* Ajustar o tamanho da fonte */
+      font-weight: bold; /* Adicionar negrito */
+  }
+  
+  button[type="submit"]:hover,
+  button[type="button"]:hover {
+      background-color: #0056b3; /* Mudar a cor quando o cursor pairar */
+      transform: scale(1.05); /* Aumentar ligeiramente o tamanho quando o cursor pairar */
+  }
+  
+  footer {
+    text-align: center;
+    background: linear-gradient(45deg, #007bff, #00bfff);
+    color: #fff;
+    padding: 20px 0;
+  }
