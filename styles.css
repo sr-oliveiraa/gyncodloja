@@ -1,75 +1,167 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
-  }
-  
-  header {
-    text-align: center;
-    background: linear-gradient(45deg, #007bff, #00bfff);
-    padding: 20px 0;
-    color: #fff;
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 36px;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-  }
-  
-  button[type="submit"],
-  button[type="button"] {
-      background-color: #ff6347;
-      color: #fff;
-      padding: 15px 30px; /* Aumentar o tamanho do botão */
-      border: none;
-      border-radius: 8px; /* Adicionar borda arredondada */
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionar transição de cor e transformação */
-      font-size: 16px; /* Ajustar o tamanho da fonte */
-      font-weight: bold; /* Adicionar negrito */
-      align-items: center;
-      width: 90%;
-  }
-  
-  button[type="submit"]:hover,
-  button[type="button"]:hover {
-      background-color: #ff6347; /* Mudar a cor quando o cursor pairar */
-      transform: scale(1.05); /* Aumentar ligeiramente o tamanho quando o cursor pairar */
-  }
-  
-  footer {
-    text-align: center;
-    background: linear-gradient(45deg, #007bff, #00bfff);
-    color: #fff;
-    padding: 20px 0;
-  }
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  padding: 20px 0;
+  color: #fff;
+  position: relative; /* Adicionado */
+}
+
+header h1 {
+  margin: 0;
+  font-size: 36px;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button[type="submit"],
+button[type="button"] {
+  background-color: #ff6347;
+  color: #fff;
+  padding: 15px 30px; /* Aumentar o tamanho do botão */
+  border: none;
+  border-radius: 8px; /* Adicionar borda arredondada */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionar transição de cor e transformação */
+  font-size: 16px; /* Ajustar o tamanho da fonte */
+  font-weight: bold; /* Adicionar negrito */
+  align-content: center;
+  width: 100%; /* Alterado */
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+  background-color: #ff6347; /* Mudar a cor quando o cursor pairar */
+  transform: scale(1.05); /* Aumentar ligeiramente o tamanho quando o cursor pairar */
+}
+
+footer {
+  text-align: center;
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  color: #fff;
+  padding: 20px 0;
+}
+
+button[voltar] {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ff6347;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+button[voltar]:hover {
+  background-color: #ff4500;
+  transform: scale(1.05);
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+header {
+  text-align: center;
+  background: linear-gradient(45deg, #007bff, #00bfff);
+  color: #fff;
+  padding-bottom: 20px;
+}
+
+.navbar {
+background-color: #007bff;
+padding: 10px 20px; /* Espaçamento interno */
+display: flex;
+justify-content: space-between; /* Distribui os elementos igualmente na linha */
+align-items: center; /* Centraliza verticalmente */
+margin-top: 0px; /* Espaçamento superior */
+margin-bottom: 20px; /* Espaçamento inferior */
+width: 90%; /* Largura da barra */
+margin-left: auto; /* Alinha à direita */
+margin-right: auto; /* Alinha à esquerda */
+border-radius: 20px; /* Bordas arredondadas */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.navbar div:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.navbar a:hover {
+  background-color: #0056b3;
+}
+
+header h1 {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.nav-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav-button:hover {
+  background-color: #0056b3;
+}
+
