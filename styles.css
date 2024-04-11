@@ -48,7 +48,7 @@ body {
   
   button[type="submit"],
   button[type="button"] {
-      background-color: #007bff;
+      background-color: #ff6347;
       color: #fff;
       padding: 15px 30px; /* Aumentar o tamanho do botão */
       border: none;
@@ -57,11 +57,13 @@ body {
       transition: background-color 0.3s ease, transform 0.2s ease; /* Adicionar transição de cor e transformação */
       font-size: 16px; /* Ajustar o tamanho da fonte */
       font-weight: bold; /* Adicionar negrito */
+      align-items: center;
+      width: 90%;
   }
   
   button[type="submit"]:hover,
   button[type="button"]:hover {
-      background-color: #0056b3; /* Mudar a cor quando o cursor pairar */
+      background-color: #ff6347; /* Mudar a cor quando o cursor pairar */
       transform: scale(1.05); /* Aumentar ligeiramente o tamanho quando o cursor pairar */
   }
   

@@ -31,6 +31,7 @@
       <input type="email" id="email" name="email" required>
 
       <button type="button" onclick="finalizarCompra()">Finalizar Compra</button>
+      <button onclick="goBack()">Voltar</button> <!-- Botão de voltar -->
     </form>
     <div style="text-align: center;">
       <a href="https://pag.ae/7-qCSp1Kt/button" target="_blank" title="Pagar com PagBank">
@@ -98,6 +99,11 @@
         // Se algum campo estiver vazio, exibir uma mensagem de erro
         alert('Por favor, preencha todos os campos do formulário.');
       }
+    }
+    
+    // Função para voltar para a página anterior
+    function goBack() {
+      window.history.back();
     }
   </script>
 </body>
